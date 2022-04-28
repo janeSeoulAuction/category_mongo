@@ -15,8 +15,5 @@ services:
     # -e 옵션
     environment:
       # MongoDB 계정 및 패스워드 설정 옵션
-      MONGO_INITDB_ROOT_USERNAME: blacklot
-      MONGO_INITDB_ROOT_PASSWORD: blacklot_jane
-    volumes:
-      # -v 옵션 (다렉토리 마운트 설정)
-      - /data/mongodb/data/db:/data/db
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
